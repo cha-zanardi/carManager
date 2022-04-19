@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "a020bf30-184a-404a-bb94-02e2374848ac",
+		"name": "cars.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/cars",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cars/1",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cars",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"title\": \"test\",\r\n      \"address\": \"test\",\r\n      \"brand\": \"test\",\r\n      \"model\": \"test\",\r\n      \"model_year\": 2020,\r\n      \"issuance\": \"01/03/2O20\",\r\n      \"mileage\": 18590,\r\n      \"fuel\": \"test\",\r\n      \"color\": \"black\",\r\n      \"numbers_doors\": 5,\r\n      \"horse_power\": 190,\r\n      \"price\": 5,\r\n      \"pictures\": [\r\n        \"https://img.leboncoin.fr/api/v1/lbcpb1/images/d1/e0/05/d1e00513e1000ac7b4969fcb24c03b530fb1ac0d.jpg?rule=ad-large\",\r\n        \"https://img.leboncoin.fr/api/v1/lbcpb1/images/d2/63/6e/d2636e10bc383a7e3594f647a7a48cb4afb85022.jpg?rule=ad-large\"\r\n      ],\r\n      \"sold\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

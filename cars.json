@@ -1,0 +1,160 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "title": "BMW 330eA Touring M Sport + Garantie BMW 24 Mois",
+      "address": "Strasbourg",
+      "brand": "BMW",
+      "model": "Other",
+      "model_year": 2021,
+      "issuance": "01/06/2021",
+      "mileage": 17604,
+      "fuel": "electric",
+      "color": "white",
+      "numbers_doors": 5,
+      "horse_power": 292,
+      "price": 55139,
+      "pictures": [
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/62/b6/10/62b610296a666b7fb3d249e29c11f96699b4440b.jpg?rule=classified-1200x800-jpg",
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/c0/09/33/c009333271ecd0e4dd4dc235a77b4efb8fc893d2.jpg?rule=ad-large"
+      ],
+      "sold": false
+    },
+    {
+      "id": 2,
+      "title": "Audi Q5 40TDI quattro S line - Virtual cockpit - Garantie 24 mois",
+      "address": "Strasbourg",
+      "brand": "Audi",
+      "model": "Q5",
+      "model_year": 2019,
+      "issuance": "01/02/2019",
+      "mileage": 55510,
+      "fuel": "diesel",
+      "color": "blue",
+      "numbers_doors": 5,
+      "horse_power": 190,
+      "price": 40990,
+      "pictures": [
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/b0/3d/e4/b03de4322311bf5ded911da4db2b9947a49412dd.jpg?rule=classified-1200x800-jpg",
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/fb/07/12/fb0712883967c8c0eb52db9dab61f729d54c37bc.jpg?rule=ad-large"
+      ],
+      "sold": false
+    },
+    {
+      "id": 3,
+      "title": "Audi TT Roadster S line 1.8 TFSI S tronic - Cockpit virtuel - LED - Garantie",
+      "address": "Strasbourg",
+      "brand": "Audi",
+      "model": "TT",
+      "model_year": 2017,
+      "issuance": "01/02/2019",
+      "mileage": 36104,
+      "fuel": "petrol",
+      "color": "black",
+      "numbers_doors": 2,
+      "horse_power": 179,
+      "pictures": [
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/9c/34/57/9c34570cff0035019b9c49e766164a9abb6be689.jpg?rule=ad-large",
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/0b/96/bd/0b96bdd615e3bd7ae31ae6d6c65aea6d03675af6.jpg?rule=ad-large"
+      ],
+      "sold": false
+    },
+    {
+      "id": 4,
+      "title": "Volkswagen T-Roc 1.5 TSI DSG United",
+      "address": "Marseille",
+      "brand": "Volkswagen",
+      "model": "T-Roc",
+      "model_year": 2020,
+      "issuance": "01/11/2020",
+      "mileage": 15000,
+      "fuel": "petrol",
+      "color": "blue",
+      "numbers_doors": 5,
+      "horse_power": 150,
+      "price": 27999,
+      "pictures": [
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/ef/de/6e/efde6eba0fb1072d0401f12c6c119ed65cc4ea66.jpg?rule=ad-large",
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/31/30/f4/3130f484a61e6ec525173e2aa63a23908ca83c55.jpg?rule=ad-large"
+      ],
+      "sold": true
+    },
+    {
+      "id": 5,
+      "title": "Mercedes-Benz SLK 250 Sport Panorama",
+      "address": "Paris",
+      "brand": "Mercedes",
+      "model": "SLK",
+      "model_year": 2015,
+      "issuance": "01/02/2015",
+      "mileage": 40520,
+      "fuel": "petrol",
+      "color": "grey",
+      "numbers_doors": 3,
+      "horse_power": 204,
+      "price": 33300,
+      "pictures": [
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/e8/a0/a5/e8a0a5d22683cfdad238caaee84ba2fc4df7c091.jpg?rule=ad-large",
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/db/dd/8c/dbdd8c040a6d2c5b8cae00b7b6a49a3761175772.jpg?rule=ad-large"
+      ],
+      "sold": false
+    },
+    {
+      "id": 6,
+      "title": "Volvo V90 D4 Geartronic Inscription Pano + Harman Kardon",
+      "address": "Strasbourg",
+      "brand": "Volvo",
+      "model": "V90",
+      "model_year": 2020,
+      "issuance": "01/03/2O20",
+      "mileage": 18590,
+      "fuel": "diesel",
+      "color": "black",
+      "numbers_doors": 5,
+      "horse_power": 190,
+      "price": 38290,
+      "pictures": [
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/d1/e0/05/d1e00513e1000ac7b4969fcb24c03b530fb1ac0d.jpg?rule=ad-large",
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/d2/63/6e/d2636e10bc383a7e3594f647a7a48cb4afb85022.jpg?rule=ad-large"
+      ],
+      "sold": true
+    },
+    {
+      "title": "test",
+      "address": "test",
+      "brand": "test",
+      "model": "test",
+      "model_year": 2020,
+      "issuance": "01/03/2O20",
+      "mileage": 18590,
+      "fuel": "test",
+      "color": "black",
+      "numbers_doors": 5,
+      "horse_power": 190,
+      "price": 5,
+      "pictures": [
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/d1/e0/05/d1e00513e1000ac7b4969fcb24c03b530fb1ac0d.jpg?rule=ad-large",
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/d2/63/6e/d2636e10bc383a7e3594f647a7a48cb4afb85022.jpg?rule=ad-large"
+      ],
+      "sold": true,
+      "id": 7
+    },
+    {
+      "id": 8,
+      "title": "",
+      "address": "",
+      "brand": "",
+      "model": "",
+      "model_year": 0,
+      "issuance": "01/03/2O20",
+      "mileage": 0,
+      "fuel": "",
+      "color": "",
+      "numbers_doors": 0,
+      "horse_power": 0,
+      "price": 0,
+      "pictures": [],
+      "sold": true
+    }
+  ]
+}
