@@ -1,31 +1,35 @@
-import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {Car} from "../../models/car";
-
-import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
-
+import {NgbCarousel, NgbSlideEvent, NgbSlideEventSource} from "@ng-bootstrap/ng-bootstrap";
+import {ActivatedRoute, Router} from "@angular/router";
+import {CarService} from "../../services/car.service";
+import {Location} from "@angular/common";
 
 @Component({
-  selector: 'app-car',
-  templateUrl: './car.component.html',
-  styleUrls: ['./car.component.css']
+  selector: 'app-car-details',
+  templateUrl: './car-details.component.html',
+  styleUrls: ['./car-details.component.css']
 })
-export class CarComponent implements OnInit {
+export class CarDetailsComponent implements OnInit {
 
   @Input("carParam")
   car! : Car;
 
-  @Output("carSelected")
-  selectCarEvent : EventEmitter<Car> = new EventEmitter<Car>();
-
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+              private carService: CarService,
+              private location: Location,
+              private router: Router) {  }
 
   ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.carService.getCar(id)
+      .subscribe(car => this.car = car);
   }
 
-  selectCar() {
-    this.selectCarEvent.emit(this.car);
+  delete(){
+    this.carService.delete(this.car.id);
+    this.router.navigate(['/cars']);
   }
-
 
   // code component pour le caroussel
   paused = false;
@@ -54,7 +58,5 @@ export class CarComponent implements OnInit {
       this.togglePaused();
     }
   }
-
-
 
 }

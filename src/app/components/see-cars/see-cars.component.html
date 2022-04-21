@@ -3,8 +3,8 @@
 <div class="container-fluid" >
 
   <!--  Réorganisation de l'ordre des voitures -->
-<!--  <h3>Réorganiser l'ordre d'affichage des cars :</h3>-->
-<!--  <button type="button" class="btn btn-primary" (click)="sortOrder()">Order</button>-->
+  <h3>Réorganiser l'ordre d'affichage des cars :</h3>
+  <button type="button" class="btn btn-primary" (click)="sortOrder()">Order</button>
 
 
   <!--  Selection d'une voiture -->
@@ -14,7 +14,7 @@
   <!--  Affichage des voitures -->
   <div class="d-flex flex-wrap flex-row justify-content-center align-items-stretch align-content-stretch">
 
-    <div class="m-3" *ngFor="let car of listCars">
+    <div class="m-3" *ngFor="let car of listCars|priceOrder:sortByIdValue">
 
       <app-car [carParam]="car" (carSelected)="onCarSelected($event)"></app-car>
 

@@ -11,6 +11,9 @@ import {registerLocaleData} from "@angular/common";
 import localFR from '@angular/common/locales/fr';
 import { CreateCarComponent } from './components/create-car/create-car.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { CarDetailsComponent } from './components/car-details/car-details.component';
+import { CarUpdateComponent } from './components/car-update/car-update.component';
+import { PriceOrderPipe } from './pipes/price-order.pipe';
 
 registerLocaleData(localFR);
 @NgModule({
@@ -18,7 +21,10 @@ registerLocaleData(localFR);
     AppComponent,
     SeeCarsComponent,
     CarComponent,
-    CreateCarComponent
+    CreateCarComponent,
+    CarDetailsComponent,
+    CarUpdateComponent,
+    PriceOrderPipe
   ],
   imports: [
     BrowserModule,

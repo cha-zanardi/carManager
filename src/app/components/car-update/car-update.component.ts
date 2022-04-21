@@ -1,20 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Component, Input, OnInit} from '@angular/core';
 import {Car} from "../../models/car";
+import {FormBuilder, FormGroup} from "@angular/forms";
 import {CarService} from "../../services/car.service";
+import {ActivatedRoute, Router} from "@angular/router";
 import {CreateCar} from "../../models/create-car";
-import {Router} from "@angular/router";
+import {Location} from "@angular/common";
 
 @Component({
-  selector: 'app-create-car',
-  templateUrl: './create-car.component.html',
-  styleUrls: ['./create-car.component.css']
+  selector: 'app-car-update',
+  templateUrl: './car-update.component.html',
+  styleUrls: ['./car-update.component.css']
 })
-export class CreateCarComponent implements OnInit {
+export class CarUpdateComponent implements OnInit {
 
   submitted: boolean = false;
 
-  car?: Car;
+  @Input("carParam")
+  car! : Car;
 
   createCarForm: FormGroup = this.fb.group({
     title: '',
@@ -33,11 +35,17 @@ export class CreateCarComponent implements OnInit {
     sold: ''
   });
 
-  constructor(private carService: CarService, private fb: FormBuilder, private router: Router) { }
+  constructor(private carService: CarService,
+              private fb: FormBuilder,
+              private router: Router,
+              private route: ActivatedRoute,
+              private location: Location) { }
 
   ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.carService.getCar(id)
+      .subscribe(car => this.car = car);
   }
-
 
   onSubmit() {
     this.submitted = true;
@@ -47,7 +55,8 @@ export class CreateCarComponent implements OnInit {
     }
 
 
-    let car: CreateCar = {
+    let car: Car = {
+      id: this.car.id,
       title: this.createCarForm.value.title,
       address: this.createCarForm.value.address,
       brand: this.createCarForm.value.brand,
@@ -64,11 +73,7 @@ export class CreateCarComponent implements OnInit {
       sold: this.createCarForm.value.sold
     };
 
-    this.carService.create(car)
-      .subscribe({
-        next: ok => {
-        }
-      });
+    this.carService.update(this.car.id, car);
     this.router.navigate(['/cars']);
 
 

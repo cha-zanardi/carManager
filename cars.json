@@ -145,16 +145,18 @@
       "address": "",
       "brand": "",
       "model": "",
-      "model_year": 0,
-      "issuance": "01/03/2O20",
-      "mileage": 0,
+      "model_year": "",
+      "issuance": "",
+      "mileage": "",
       "fuel": "",
       "color": "",
-      "numbers_doors": 0,
-      "horse_power": 0,
-      "price": 0,
-      "pictures": [],
-      "sold": true
+      "numbers_doors": "",
+      "horse_power": "",
+      "price": "",
+      "pictures": [
+        null
+      ],
+      "sold": ""
     }
   ]
 }

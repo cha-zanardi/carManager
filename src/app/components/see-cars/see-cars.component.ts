@@ -9,17 +9,16 @@ import {Car} from "../../models/car";
 })
 export class SeeCarsComponent implements OnInit {
 
-  // sortByIdValue: string = 'ASC';
+  sortByIdValue: string = 'ASC';
   selectedCar!: Car;
 
   listCars: Car[] = [];
-  
-  
+
+
 
   constructor(private carService: CarService) { }
 
   ngOnInit(): void {
-    // this.listPokemons = this.pokemonService.fetchAll();
 
     this.carService.fetchAll()
       .subscribe({
@@ -35,14 +34,14 @@ export class SeeCarsComponent implements OnInit {
       });
   }
 
-  // sortOrder() {
-  //   if (this.sortByIdValue === 'ASC') {
-  //     this.sortByIdValue = 'DESC'
-  //   }
-  //   else {
-  //     this.sortByIdValue = 'ASC'
-  //   }
-  // }
+  sortOrder() {
+    if (this.sortByIdValue === 'ASC') {
+      this.sortByIdValue = 'DESC'
+    }
+    else {
+      this.sortByIdValue = 'ASC'
+    }
+  }
 
   onCarSelected(car : Car) {
     this.selectedCar = car;

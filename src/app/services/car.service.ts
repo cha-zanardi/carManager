@@ -27,4 +27,16 @@ export class CarService {
   create(car: CreateCar): Observable<Car[]> {
     return this.http.post<Car[]>(`${this.BASE_URL}/cars`, car, this.httpOptions);
   }
+
+  getCar(id: number): Observable<Car>{
+    return this.http.get<Car>(`${this.BASE_URL}/cars/${id}`);
+  }
+
+  delete(id: number):void{
+    this.http.delete(`${this.BASE_URL}/cars/${id}`).subscribe();
+  }
+
+  update(id: number, car: Car):void{
+    this.http.put(`${this.BASE_URL}/cars/${id}`, car, this.httpOptions).subscribe();
+  }
 }
